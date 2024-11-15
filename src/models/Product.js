@@ -11,6 +11,17 @@ class Product {
     });
   }
 
+  // get farmer's products
+  static getFarmerProducts(farmerId) {
+    return new Promise((resolve, reject) => {
+      const query = 'SELECT * FROM products WHERE farmer_id = ?';
+      db.query(query, [farmerId], (err, results) => {
+        if (err) reject(err);
+        resolve(results);
+      });
+    });
+  }
+
   static getAll() {
     return new Promise((resolve, reject) => {
       const query = 'SELECT * FROM products';

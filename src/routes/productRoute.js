@@ -1,19 +1,28 @@
-// const express = require('express');
-// const Product = require('../models/Product');
-// const authenticateToken = require('../middleware/authMiddleware');
-
 import express from 'express'
 import Product from '../models/Product.js';
 import { authenticateToken } from '../middleware/authMiddleware.js';
+import ApiResponse from '../payload/ApiResponse.js';
 
 const productRouter = express.Router();
 
 productRouter.get('/', async (req, res) => {
   try {
     const products = await Product.getAll();
-    res.json(products);
+    res.json(ApiResponse.success('Products fetched successfully', products));
   } catch (err) {
-    res.status(500).json({ message: 'Error fetching products', error: err });
+    res.status(500).json(ApiResponse.error('Error fetching products', err));
+  }
+});
+
+// get farmer products
+productRouter.get('/farmer', authenticateToken, async (req, res) => {
+  if (req.user.role !== 'farmer') return res.status(403).json(ApiResponse.forbidden('Access denied'));
+
+  try {
+    const products = await Product.getFarmerProducts(req.user.id);
+    res.json(ApiResponse.success('Products fetched successfully', products));
+  } catch (err) {
+    res.status(500).json(ApiResponse.error('Error fetching products', err));
   }
 });
 

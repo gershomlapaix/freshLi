@@ -13,7 +13,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter);
 app.use('/api/farmer', farmerRouter);
 
-const port = 3000 || process.env.PORT;
+const port = 5000 || process.env.PORT;
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
