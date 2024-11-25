@@ -82,7 +82,7 @@ header nav ul li a:hover {
 #hero {
     position: relative;
     height: 80vh;
-    background: url('../assets/5.png') center/cover no-repeat;
+    background: url('../assets/3.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
