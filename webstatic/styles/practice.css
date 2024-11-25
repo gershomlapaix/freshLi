@@ -1,0 +1,206 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+  header {
+      background-color: white;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+  }
+  
+  header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+  }
+  
+  header nav ul li {
+      margin: 0 15px;
+  }
+  
+  header nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+  }
+  
+  header nav ul li a.active,
+  header nav ul li a:hover {
+      background-color: #B6D7D1;
+      border-radius: 5px;
+  }
+  
+  
+  .dropdown {
+      position: relative;
+  }
+  
+  .dropdown-menu {
+      display: none; 
+      position: absolute;
+      background-color: white;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      min-width: 150px;
+  }
+  
+  .dropdown-menu li {
+      padding: 10px;
+      text-align: left;
+  }
+  
+  .dropdown-menu li a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+  }
+  
+  .dropdown-menu li:hover {
+      background-color: #f1f1f1;
+  }
+  
+ 
+  nav ul li:hover .dropdown-menu {
+    display: block; 
+  }
+  
+ 
+  #hero {
+    background: linear-gradient(to right, #2a9d8f, #85c7b1);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  #hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #hero p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+  
+ 
+  #practices {
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .practice-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .practice-item:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .practice-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #2a9d8f; 
+    transition: color 0.3s ease;
+  }
+  
+  .practice-item h2:hover {
+    color: #1e6f5c;
+  }
+  
+  .practice-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .practice-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #333;
+  }
+  
+  .practice-item ul li {
+    margin-bottom: 5px;
+  }
+  
+ 
+  footer {
+      background-color: #333;
+      color: #f2f2f2;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+  }
+  
+ 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  h2:hover {
+    cursor: pointer;
+    text-shadow: 0px 2px 10px rgba(42, 157, 143, 0.6);
+  }
+  

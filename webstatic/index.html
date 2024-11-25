@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRESHLi</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="drop.js" defer></script>
+
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="dropdown">
+          <a href="resources.html">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a href="practice.html">Farming Practices</a></li>
+            <li><a href="veterinary.html">Veterinary support</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Empowering Farmers, Growing Futures</h1>
+    <p>Join our digital marketplace for fair prices and efficient farming solutions.</p>
+    <button id="open-modal">Sign In</button>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Select Your Role</h2>
+      <a href="farmer.html" class="modal-btn">As a Farmer</a>
+      <a href="buyer.html" class="modal-btn">As a Buyer</a>
+      <button id="close-modal" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About FRESHLi</h2>
+    <p>We aim to revolutionize the agricultural landscape in Rwanda by offering technology-driven solutions to farmers, promoting fair trade and sustainable practices.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 FRESHLi - All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const openModalBtn = document.getElementById("open-modal");
+    const closeModalBtn = document.getElementById("close-modal");
+
+    openModalBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

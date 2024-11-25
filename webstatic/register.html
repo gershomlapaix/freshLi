@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRESHLi Register</title>
+    <link rel="stylesheet" href="./styles/register.css">
+    <script src="drop.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="resources.html">Resources</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="practice.html">Farming Practices</a></li>
+                        <li><a href="veterinary.html">Veterinary Support</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="register-container">
+            <h1>FRESHLi Registration</h1>
+            <p class="description">Register as a Buyer or Farmer and connect with sustainable farming solutions.</p>
+            <form action="#" class="register-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-type">Register As</label>
+                    <select id="user-type" name="user-type" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="buyer">Buyer</option>
+                        <option value="farmer">Farmer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FRESHLi. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
