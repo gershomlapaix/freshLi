@@ -155,8 +155,8 @@ p {
     align-items: flex-start;
     margin-top: 20px;
     gap: 10px; 
-    flex-wrap: nowrap; 
-    overflow-x: auto; 
+    flex-wrap: wrap; 
+    /* overflow-x: auto;  */
 }
 
 .team-member {
