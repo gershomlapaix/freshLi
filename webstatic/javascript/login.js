@@ -3,10 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     event.preventDefault(); 
 
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    console.log(email, password);
-    
+    const password = document.getElementById('password').value;    
   
     // Prepare the data to send in the request
     const data = {
@@ -22,10 +19,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-      });
-
-      console.log(response);
-      
+      });      
   
       // Check if the login was successful
       if (response.ok) {

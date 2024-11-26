@@ -15,7 +15,7 @@ productRouter.get('/', async (req, res) => {
   }
 });
 
-// get farmer products
+// get farmer's products
 productRouter.get('/farmer', authenticateToken, async (req, res) => {
   if (req.user.role !== 'farmer') return res.status(403).json(ApiResponse.forbidden('Access denied'));
 
@@ -29,7 +29,7 @@ productRouter.get('/farmer', authenticateToken, async (req, res) => {
 
 // get products by category
 productRouter.get('/category/:id', async (req, res) => {
-  // check if the category exists
+
   const category = await Category.getById(req.params.id);
   if (!category.length) {
     return res.status(404).json(ApiResponse.notFound('Category not found'));

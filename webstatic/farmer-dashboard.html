@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="./farmer-dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="profile-section">
+            <h2>Farmer Profile</h2>
+            <div class="profile-info">
+                <img id="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgzlAIaq9_fY1FwvEaetGEades903CrQ0syQ&s" alt="Avatar" class="avatar">
+                <div>
+                    <p id="name">Name: </p>
+                    <p id="phone">Phone: </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-section">
+            <h2>Products</h2>
+            <p id="product-count">Total Products: 0</p>
+
+            <div id="products-list">
+                <!-- Product list will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./javascript/farmer-dashboard.js"></script> <!-- Link to your JS file -->
+</body>
+
+</html>

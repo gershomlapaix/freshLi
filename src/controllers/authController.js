@@ -3,10 +3,10 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
 export const register = async (req, res) => {
-    const { fullName, username, email, password, role } = req.body;
+    const { fullName, username, email, phoneNumber, password, role } = req.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
-        await User.create({fullName, username, email, password: hashedPassword, role });
+        await User.create({fullName, username, email, phoneNumber, password: hashedPassword, role });
         res.status(201).json({ message: 'User registered successfully' });
     } catch (err) {
         res.status(500).json({ message: 'Error registering user', error: err });

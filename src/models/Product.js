@@ -13,8 +13,6 @@ class Product {
 
   // get farmer's products
   static getFarmerProducts(farmerId) {
-    console.log(farmerId);
-
     return new Promise((resolve, reject) => {
       const query = 'SELECT * FROM products WHERE farmer_id = ?';
       db.query(query, [farmerId], (err, results) => {
