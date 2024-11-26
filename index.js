@@ -1,4 +1,5 @@
 import express, { json } from 'express';
+import cors from 'cors';
 import authRouter from './src/routes/authRoutes.js';
 import bodyParser from 'body-parser';
 import productRouter from './src/routes/productRoute.js';
@@ -9,6 +10,7 @@ import transactionRouter from './src/routes/transactionRoute.js';
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use('/api/auth', authRouter);
 app.use("/api/category", categoryRouter);
