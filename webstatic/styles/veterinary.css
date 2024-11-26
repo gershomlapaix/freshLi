@@ -98,7 +98,8 @@ body {
   }
   
   
-  #region-item {
+  .region-item {
+    max-width: 500px;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -107,16 +108,34 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  #region-item h3 {
+  .region-item img{
+    width: 80%;
+    height:200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  .region-item h3 {
     font-size: 1.6rem;
     color: #2a9d8f;
     margin-bottom: 10px;
   }
   
-  #region-item p {
+  .region-item p {
     font-size: 1rem;
     color: #555;
     margin: 0;
+  }
+
+  .region-block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+
+  #veterinary-regions h2{
+    text-align: center;
+    
   }
   
   
