@@ -1,5 +1,4 @@
 import express, { json } from 'express';
-import { db } from './src/config/db.js';
 import authRouter from './src/routes/authRoutes.js';
 import bodyParser from 'body-parser';
 import productRouter from './src/routes/productRoute.js';
