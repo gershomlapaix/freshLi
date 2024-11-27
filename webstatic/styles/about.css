@@ -175,12 +175,18 @@ p {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
+
 .team-member img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
     margin-bottom: 15px;
     border: 2px solid white;
+    
+}
+
+#aimee{
+    object-fit: cover;
 }
 
 .team-member h3 {
