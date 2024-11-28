@@ -23,7 +23,7 @@ class User {
 
     static findById(id) {
         return new Promise((resolve, reject) => {
-            const query = 'SELECT * FROM users WHERE id = ?';
+            const query = 'SELECT u.id,u.fullName, u.username, u.email, u.role, u.phone_number FROM users u WHERE id = ?';
             db.query(query, [id], (err, results) => {
                 if (err) reject(err);
                 resolve(results[0]);

@@ -34,11 +34,46 @@ export class Transactions {
     // get buyers transactions
     static getBuyerTransactions(buyerId) {
         return new Promise((resolve, reject) => {
-            const query = 'SELECT * FROM transactions WHERE buyer_id = ?';
+            const query = 'SELECT p.name, p.price, t.quantity, t.total, t.status, t.created_at  FROM products p INNER JOIN transactions t ON p.id = t.product_id WHERE buyer_id = ?';
             db.query(query, [buyerId], (err, results) => {
                 if (err) reject(err);
                 resolve(results);
             });
         });
     }
+
+    // complete the transaction
+    static completeTransaction(id) {
+        return new Promise((resolve, reject) => {
+            const query = 'UPDATE transactions SET status = "COMPLETED" WHERE id = ?';
+            db.query(query, [id], (err, results) => {
+                if (err) reject(err);
+                resolve(results);
+            });
+        });
+    }
+
+    // cancel the transaction
+    static cancelTransaction(id) {
+        return new Promise((resolve, reject) => {
+            const query = 'UPDATE transactions SET status = "CANCELLED" WHERE id = ?';
+            db.query(query, [id], (err, results) => {
+                if (err) reject(err);
+                resolve(results);
+            });
+        });
+    }
+
+    // get transactions made on farmer's products
+    // select p.name,t.product_id from products p inner join transactions t on p.id=t.product_id where p.farmer_id=6;
+    static getFarmerTransactions(farmerId) {
+        return new Promise((resolve, reject) => {
+            const query = 'SELECT p.name, p.price,t.id, t.quantity, t.total, t.status  FROM products p INNER JOIN transactions t ON p.id = t.product_id WHERE p.farmer_id = ?';
+            db.query(query, [farmerId], (err, results) => {
+                if (err) reject(err);
+                resolve(results);
+            });
+        });
+    }
+
 }

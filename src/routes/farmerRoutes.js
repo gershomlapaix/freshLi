@@ -9,7 +9,8 @@ const farmerRouter = express.Router();
 farmerRouter.post('/add-product', authenticateToken, async (req, res) => {
   if (req.user.role !== 'farmer') return res.status(403).json(ApiResponse.forbidden('Access denied'));
 
-  const { name, description, price, quantity, unit, farmerId, categoryId, imageUrl } = req.body;
+  const { name, description, price, quantity, unit, categoryId, imageUrl } = req.body;  
+
   try {
     const product = await Product.create({
       name,
@@ -19,7 +20,7 @@ farmerRouter.post('/add-product', authenticateToken, async (req, res) => {
       farmerId: req.user.id,
       unit,
       categoryId,
-      imageUrl
+      imageUrl:''
     });
     res.json(ApiResponse.success('Product added successfully', product)).status(201);
   } catch (err) {

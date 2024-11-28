@@ -113,6 +113,8 @@
   }
   
   .practice-item {
+    margin: 0 auto;
+    width: 40%;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #f9f9f9;

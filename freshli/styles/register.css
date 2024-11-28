@@ -42,7 +42,7 @@ header nav ul li a.active,
 header nav ul li a:hover {
     background-color: #B6D7D1;
     border-radius: 5px;
-    color: #2d9c3c;
+    color: #0D7C66;
 }
 
 
@@ -97,13 +97,14 @@ main {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    /* text-align: center; */
 }
 
 h1 {
     font-size: 26px;
-    color: #2d9c3c;
+    color: #0D7C66;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .description {
@@ -138,27 +139,28 @@ input, select {
 }
 
 input:focus, select:focus {
-    border-color: #2d9c3c;
+    border-color: #0D7C66;
     outline: none;
     box-shadow: 0 0 4px rgba(45, 156, 60, 0.3);
 }
 
 button.register-btn {
-    width: 100%;
+    width: fit-content;
     padding: 12px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #2d9c3c;
+    background-color: #0D7C66;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0 auto;
     margin-top: 15px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button.register-btn:hover {
-    background-color: #238a31;
+    background-color: #0D7C66;
     transform: scale(1.02);
 }
 
