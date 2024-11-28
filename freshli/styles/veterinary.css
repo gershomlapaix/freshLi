@@ -1,213 +1,221 @@
-
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #f9f9f9, #e9ecef);
-    color: #333;
-  }
-  
-  header {
-    background-color: white;
-    color: #333;
-    text-align: center;
-    padding: 20px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  header nav ul li {
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  header nav ul li a.active,
-  header nav ul li a:hover {
-    background-color: #B6D7D1;
-    color: #fff;
-    border-radius: 5px;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    min-width: 150px;
-  }
-  
-  .dropdown-menu li {
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .dropdown-menu li a {
-    color: #333;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-menu li:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  
-  #hero-veterinary {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to right, #2a9d8f, #85c7b1);
-    color: white;
-    animation: fadeInDown 1.5s ease-out;
-  }
-  
-  #hero-veterinary h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-  }
-  
-  #hero-veterinary p {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-  
-  
-  .region-item {
-    max-width: 500px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .region-item img{
-    width: 80%;
-    height:200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  .region-item h3 {
-    font-size: 1.6rem;
-    color: #2a9d8f;
-    margin-bottom: 10px;
-  }
-  
-  .region-item p {
-    font-size: 1rem;
-    color: #555;
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f9f9f9, #e9ecef);
+  color: #333;
+}
+
+header {
+  background-color: white;
+  color: #333;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+  background-color: #B6D7D1;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+#hero-veterinary {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #2a9d8f, #85c7b1);
+  color: white;
+  animation: fadeInDown 1.5s ease-out;
+}
+
+#hero-veterinary h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#hero-veterinary p {
+  font-size: 1.2rem;
+  margin: 0;
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+.region-item {
+  max-width: 500px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.region-item img {
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.region-item h3 {
+  font-size: 1.6rem;
+  color: #2a9d8f;
+  margin-bottom: 10px;
+}
+
+.region-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.region-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+#veterinary-regions h2 {
+  text-align: center;
+}
+
+#veterinary-practices {
+
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+#veterinary-practices h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2a9d8f;
+  margin-bottom: 15px;
+}
+
+#veterinary-practices ul {
+  width: 60%;
+  margin: 0 auto;
+  list-style: disc;
+  /* margin-left: 20px; */
+  color: #333;
+}
+
+#veterinary-practices ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+
+#veterinary-contact {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f1f9f7;
+  color: #333;
+}
+
+#veterinary-contact p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#veterinary-contact button {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#veterinary-contact button:hover {
+  background-color: #85c7b1;
+}
+
+
+footer {
+  background-color: #333;
+  color: #f2f2f2;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 
-  .region-block{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-
-  #veterinary-regions h2{
-    text-align: center;
-    
-  }
-  
-  
-  #veterinary-practices {
-    padding: 20px;
-    background-color: #ffffff;
-  }
-  
-  #veterinary-practices h2 {
-    font-size: 1.8rem;
-    color: #2a9d8f;
-    margin-bottom: 15px;
-  }
-  
-  #veterinary-practices ul {
-    list-style: disc;
-    margin-left: 20px;
-    color: #333;
-  }
-  
-  #veterinary-practices ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-  }
-  
-  
-  #veterinary-contact {
-    text-align: center;
-    padding: 30px 20px;
-    background: #f1f9f7;
-    color: #333;
-  }
-  
-  #veterinary-contact p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  #veterinary-contact button {
-    background-color: #2a9d8f;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #veterinary-contact button:hover {
-    background-color: #85c7b1;
-  }
-  
-  
-  footer {
-    background-color: #333;
-    color: #f2f2f2;
-    padding: 1.5rem;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-  }
-  
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}

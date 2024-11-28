@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="./farmer-dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="profile-section">
+            <h2>Farmer Profile</h2>
+            <div class="profile-info">
+                <img id="avatar"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgzlAIaq9_fY1FwvEaetGEades903CrQ0syQ&s"
+                    alt="Avatar" class="avatar">
+                <div>
+                    <p id="name">Name: </p>
+                    <p id="email">Email: </p>
+                    <p id="phone">Phone: </p>
+                </div>
+            </div>
+
+            <div>
+                <button style="margin-top: 10px;margin-left: 20px; display: block; border: 1px solid grey; padding: 4px 8px; border-radius: 5px;
+                    cursor: pointer;" id="logoutBtn">
+                    Logout
+                </button>
+            </div>
+        </div>
+
+
+        <div class="products-section">
+            <button class="add-product-btn" id="add-product-btn">
+                <i class="fas fa-plus"></i> Add Product
+            </button>
+            <h2>Products</h2>
+            <p id="product-count">Total Products: 0</p>
+
+            <div id="products-list">
+                <!-- Product list will be dynamically populated here -->
+            </div>
+
+            <h2>Transactions</h2>
+            <table id="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction data will be dynamically inserted here -->
+                </tbody>
+            </table>
+
+            <div id="productModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="close-btn">&times;</span>
+                    <h2>Add New Product</h2>
+                    <form id="productForm" class="product-form">
+                        <div class="form-group">
+                            <label for="productName">Product Name</label>
+                            <input type="text" id="productName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="number" id="price" step="0.01" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="unit">Unit</label>
+                            <select id="unit" required>
+                                <option value="KG">Kilogram (KG)</option>
+                                <option value="G">Gram (G)</option>
+                                <option value="L">Liter (L)</option>
+                                <option value="PCS">Pieces (PCS)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" required>
+                                <option value="1">Fruits</option>
+                                <option value="2">Foods</option>
+                            </select>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label for="image">Product Image</label>
+                            <input type="file" id="image" accept="image/*">
+                        </div> -->
+
+                        <button type="submit" class="submit-btn">Add Product</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./javascript/farmer-dashboard.js"></script> <!-- Link to your JS file -->
+</body>
+
+</html>
