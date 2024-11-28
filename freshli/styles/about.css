@@ -175,6 +175,7 @@ p {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
+
 .team-member img {
     object-fit: cover;
     border-radius: 50%;
@@ -182,6 +183,11 @@ p {
     height: 100px;
     margin-bottom: 15px;
     border: 2px solid white;
+    
+}
+
+#aimee{
+    object-fit: cover;
 }
 
 .team-member h3 {
