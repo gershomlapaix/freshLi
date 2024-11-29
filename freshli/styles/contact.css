@@ -192,11 +192,12 @@ body {
   
   form button {
     display: inline-block;
-    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
     padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    background: linear-gradient(135deg, #4CAF50, #45a049);
+    background: linear-gradient(135deg, #0D7C66, #0D7C66);
     color: white;
     border: none;
     border-radius: 6px;
@@ -206,7 +207,7 @@ body {
   
   form button:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #45a049, #4CAF50);
+    background: linear-gradient(135deg, #0D7C66, #0D7C66);
   }
   
   
